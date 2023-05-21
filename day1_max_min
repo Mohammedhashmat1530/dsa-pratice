@@ -1,0 +1,40 @@
+Given an array A of size N of integers. Your task is to find the sum of minimum and maximum element in the array.
+
+Example 1:
+
+Input:
+N = 5
+A[] = {-2, 1, -4, 5, 3}
+Output: 1
+Explanation: min = -4, max =  5. Sum = -4 + 5 = 1
+
+
+
+
+
+
+
+class Solution
+{
+   public:
+    int findSum(int A[], int N)
+    {
+    	//code here.
+    	int large=INT_MIN;
+    	int small=INT_MAX;
+    	for(int i=0;i<N;i++){
+    	    if(A[i]>large){
+    	        large=A[i];
+    	    }
+    	    
+    	    if(A[i]<small){
+    	        small=A[i];
+    	    }
+    	}
+    	int sum=0;
+    	sum=large+small;
+    
+    
+    return sum;	
+    }
+};
